@@ -8,10 +8,10 @@ api for Tvmaze.com tv shows and serials information site
 int main() {
    Tvmaze api;
 
-    auto photos = api.get_people_list().then([](json::value result) {
+    auto people = api.get_people_list().then([](json::value result) {
         std::cout << "Search results: " << result.serialize() << std::endl;
     });
-    photos.wait();
+    people.wait();
     
     return 0;
 }
